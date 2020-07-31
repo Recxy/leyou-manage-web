@@ -110,7 +110,7 @@
             }
           }).then(resp => {
             const data = [];
-            for (let d of resp.data) {
+            for (let d of JSON.parse(resp.data.data)) {
               const node = {
                 value: d[this.itemValue],
                 label: d[this.itemText]
